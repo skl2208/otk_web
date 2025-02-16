@@ -11,6 +11,14 @@
   src: url("Prompt-Light.ttf");
 }
 
+:root {
+  --primary-color: #3498db; /* สีหลัก */
+  --secondary-color: #2ecc71; /* สีรอง */
+  --text-color: #333; /* สีข้อความ */
+  --background-color: #f4f4f4; /* สีพื้นหลัง */
+  --bgbody:#d7d4d4;
+}
+
 html {
   scroll-behavior: smooth;
 }

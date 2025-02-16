@@ -93,8 +93,8 @@ include "include/config.php";
 
                 array_push($list_news["data"], $news);
 
-                echo "<div class=\"col-12 text-center\"><a href=\"" . $news[""] . "\"><img src=\"" . $news["headimageurl"] . "\" width=\"500\"></a></div>";
-                echo "<div class=\"col-12 text-center\"><a href=\"" . $news[""] . "\"><h5>" . $news["headnews"] . "</h5></a></div>";
+                echo "<div class=\"col-12 text-center\"><a href=\"news.php?id=" . $news["id"] . "\"><img src=\"" . $news["headimageurl"] . "\" width=\"500\"></a></div>";
+                echo "<div class=\"col-12 text-center\"><a href=\"news.php?id=" . $news["id"] . "\"><h5>" . $news["headnews"] . "</h5></a></div>";
             }
             ?>
         </div>
