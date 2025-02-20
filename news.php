@@ -35,7 +35,7 @@ if (isset($_GET["id"]) && $_GET["id"] != null && $_GET["id"] != "") {
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>อ.ต.ก.</title>
-    <link rel="icon" type="image/png" href="" />
+    <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="stylesheet" type="text/css" href="bootstrap-5.2.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/web.css">
 
@@ -71,16 +71,30 @@ if (isset($_GET["id"]) && $_GET["id"] != null && $_GET["id"] != "") {
             color: white;
             text-align: center;
             overflow: hidden;
-            white-space: nowrap; /* ห้ามข้อความขึ้นบรรทัดใหม่ */
-            text-overflow:ellipsis;
+            white-space: nowrap;
+            /* ห้ามข้อความขึ้นบรรทัดใหม่ */
+            text-overflow: ellipsis;
+            display: flex;
+            align-items: center;
+            /* จัดให้อยู่กึ่งกลางความสูง (แนวตั้ง) */
+
+        }
+
+        .space {
+            margin-left: 10px;
+            margin-right: 10px;
+
         }
     </style>
 </head>
 
 <body>
-    <div class="headnews">
-        <p><h3><?php echo $headnews ?></h3></p>
+    <div class="headnews" style="margin-left:0;margin-right:0;height:60px;text-align:left;">
+        <div class="col"><a href="javascript:window.history.back();"><img src="images/93634.png" width="30" class="space"></a><?php echo $headnews ?></div>
     </div>
+    <!-- <div class="headnews">
+        <p><h3><?php echo $headnews ?></h3></p>
+    </div> -->
     <div class="container page">
         <div class="row">
 

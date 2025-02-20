@@ -249,6 +249,16 @@ a.dropdown-item.dropdown-header:hover {
   color: coral !important;
   font-size : 1.1em;
 }
+.greeting {
+  font-weight: bold;
+  font-size: 20px;
+  color: darkgreen
+}
+.headlinenews {
+  font-weight: bold;
+  font-size: 16px;
+  color: rgb(15, 15, 15);
+}
 .emphasize-font {
   font-size: 2em;
   font-style: italic;

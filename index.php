@@ -10,7 +10,7 @@ include "include/config.php";
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>อ.ต.ก.</title>
-    <link rel="icon" type="image/png" href="" />
+    <link rel="icon" type="image/png" href="favicon.png"/>
     <link rel="stylesheet" type="text/css" href="bootstrap-5.2.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/web.css">
 
@@ -28,17 +28,19 @@ include "include/config.php";
             display: block;
             /* ป้องกันช่องว่างด้านล่างของรูปภาพ */
         }
+        .picture-headnews {
+            max-width: 600px;
+            width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 
 <body>
-    <div class="position-relative">
+    <div class="position-relative w-100 d-block">
         <img src="images/bg4.png" class="full-width-image">
-        <div class="container position-absolute start-50 translate-middle" style="top:50%">
+        <div class="container position-absolute start-50 translate-middle" style="top:65%">
             <div class="row">
-                <div class="col-12 text-center">
-                    <h1>ทดสอบหน้าเวป</h1>
-                </div>
                 <?php
 
                 $greeting = array(
@@ -57,16 +59,16 @@ include "include/config.php";
                     $greeting["welcomeen"] = $row["welcomeen"];
                 }
 
-                echo "<div class=\"col-12 text-center\"><h2>" . $greeting["welcometh"] . "</h2></div>";
-                echo "<div class=\"col-12 text-center\"><h2>" . $greeting["welcomeen"] . "</h2></div>";
+                echo "<div class=\"col-12 text-center greeting\">" . $greeting["welcometh"] . "</div>";
+                echo "<div class=\"col-12 text-center greeting\">" . $greeting["welcomeen"] . "</div>";
                 ?>
 
 
             </div>
         </div>
     </div>
-    <div class="container position-relative">
-        <div class="row">
+    <div class="container w-100 d-block mt-2">
+        <div class="row" style="justify-content: center;">
             <?php
 
             $list_news["data"] = [];
@@ -93,8 +95,8 @@ include "include/config.php";
 
                 array_push($list_news["data"], $news);
 
-                echo "<div class=\"col-12 text-center\"><a href=\"news.php?id=" . $news["id"] . "\"><img src=\"" . $news["headimageurl"] . "\" width=\"500\"></a></div>";
-                echo "<div class=\"col-12 text-center\"><a href=\"news.php?id=" . $news["id"] . "\"><h5>" . $news["headnews"] . "</h5></a></div>";
+                echo "<div class=\"col-12 text-center\" style=\"padding-left:0;padding-right:0;\"><a href=\"news.php?id=" . $news["id"] . "\"><img src=\"" . $news["headimageurl"] . "\" class=\"picture-headnews\"></a></div>";
+                echo "<div class=\"col-12 text-left headlinenews\" style=\"padding-bottom:10px;max-width:600px;\"><a href=\"news.php?id=" . $news["id"] . "\">" . $news["headnews"] . "</a></div>";
             }
             ?>
         </div>
